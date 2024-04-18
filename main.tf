@@ -43,8 +43,7 @@ resource "aws_default_route_table" "main-rtb" {
     Name: "${var.env_prefix}-main-rtb"
   }
 }
-resource "aws_security_group" "myapp-sg" {
-  name = "myapp-sg"
+resource "aws_default_security_group" "default-sg" {
   vpc_id = aws_vpc.myapp-vpc.id
 
   ingress {
@@ -69,6 +68,6 @@ resource "aws_security_group" "myapp-sg" {
     prefix_list_ids = []
   }
   tags = {
-    Name: "${var.env_prefix}-sg"
+    Name: "${var.env_prefix}-default-sg"
   }
 }
