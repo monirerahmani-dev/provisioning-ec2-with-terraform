@@ -4,7 +4,10 @@
 
 2. Create custom Subnet
 
-Create Route Table and Internet Gateway
-Provision EC2 Instance
-Deploy nginx Docker Container
-Create Security Group (FireWall)
+3. Create Route Table and Internet Gateway
+
+4. Provision EC2 Instance
+
+5. Deploy nginx Docker Container
+
+6. Create Security Group (FireWall)
