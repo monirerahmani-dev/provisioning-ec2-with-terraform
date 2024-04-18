@@ -124,7 +124,11 @@ resource "aws_instance" "myapp-server" {
   }
 
   provisioner "remote-exec" {
-    inline = ["/home/ec2-user/entry-script-on-ec2.sh"]
+    script = "entry-script.sh"
+  }
+
+  provisioner "local-exec" {
+    command = "echo ${self.public_ip} > output.txt"
   }
 
   tags = {
